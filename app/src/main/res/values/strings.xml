@@ -7,5 +7,7 @@
     <string name="intent_host">cprest</string>
     <string name="at">\@</string>
     <string name="dot">•</string>
+    <string name="compose_tweet_hint">What\'s happening?</string>
+    <string name="btn_compose_text">Tweet</string>
 
 </resources>
