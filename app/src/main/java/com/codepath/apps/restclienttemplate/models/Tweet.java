@@ -33,5 +33,4 @@ public class Tweet {
 
         return tweet;
     }
-
 }

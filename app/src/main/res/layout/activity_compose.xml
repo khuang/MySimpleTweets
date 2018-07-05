@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,23 +9,44 @@
     <EditText
         android:id="@+id/etCompose"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="418dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnCancel"
+        android:layout_marginTop="1dp"
+        android:gravity="top"
         android:hint="@string/compose_tweet_hint"
         android:inputType="text|textMultiLine"
-        android:maxLength="140" />
+        android:selectAllOnFocus="false"
+        android:layout_above="@id/btnCompose"
+        android:singleLine="false"
+        android:textAlignment="viewStart" />
 
     <Button
         android:id="@+id/btnCompose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="342dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/twitter_blue"
         android:text="@string/btn_compose_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCompose" />
+        android:textColor="@color/light_gray"/>
 
-</android.support.constraint.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/btnCancel"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/tvCharCount"
+        android:layout_width="96dp"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/btnCompose"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="140" />
+
+</RelativeLayout>
