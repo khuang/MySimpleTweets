@@ -106,7 +106,6 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
 
             //bind views from xml file
             ButterKnife.bind(this, itemView);
-
             itemView.setOnClickListener(this);
 
         }
